@@ -1,37 +1,125 @@
-## Welcome to GitHub Pages
-
-You can use the [editor on GitHub](https://github.com/oioi-xx/portfolio/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
-
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
-
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/oioi-xx/portfolio/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>portfolio</title>
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic">
+<link rel="stylesheet" href="css/reset.css">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/menu.css">
+<link rel="stylesheet" href="css/respons.css">
+<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+<script src="js/script.js"></script>
+<script src="js/menu.js"></script>
+<script src="js/progressbar.js"></script>
+<script src="js/progressbar_set.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/progressbar.js/1.1.0/progressbar.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-circle-progress/1.2.2/circle-progress.min.js" integrity="sha512-6kvhZ/39gRVLmoM/6JxbbJVTYzL/gnbDVsHACLx/31IREU4l3sI7yeO0d4gw8xU5Mpmm/17LMaDHOCf+TvuC2Q==" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.js"></script>
+</head>
+<body>
+<div class="container">
+	<div class="main_area box">
+		<div class="main-bg"></div>
+		<div class="main-title">
+		    <p class="typing-txt title3">WELCOME TO MY PORTFOLIO :) </p> 
+            <p class="typing title3"></p> 
+		    <div class="title">多玄</div>
+		    <div class="title2">[많을 다 : 검을 현]</div>  
+		</div>
+		<nav>
+            <div class="menu-bar">
+                <a class="menu-trigger" href="#">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </a>
+            </div>
+		    <ul class="menu">
+		        <li><a href="#"><span>clone coding</span></a></li>
+		        <li><a href="#"><span>Reactive type web</span></a></li>
+		        <li><a href="#"><span>LESS/SASS</span></a></li>
+		        <li><a href="#"><span>UI/UX</span></a></li>
+		        <li><a href="#"><span>PHP login page</span></a></li>
+		    </ul>
+		</nav>
+	</div>
+    <div class="main-bg-img"></div>
+    <div class="menu-bg"></div>
+	<div class="sub sub1">
+        <div class="sub1-top">
+            <div class="sub-title">
+                <h2>about me</h2>
+                <p>안녕하세요 웹 퍼블리셔 홍다현 입니다 :)</p>
+                <hr>
+                <span class="text">
+                    <b>얼음이 있는 방지하는 보이는 오아이스도 것이다. </b><br>
+                    <br>두기 아니한 청춘이 끝까지 위하여서. 뜨거운지라, 위하여 위하여, 인간의 위하여서 바이며, 희망의 봄바람이다. 무한한 그들의 찾아 옷을 가슴에 가지에 꽃이 인생의 뿐이다. 만물은 생명을 대한 같이, 구할 남는 대중을 인간이 열락의 것이다. 못할 행복스럽고 원대하고, 찬미를 말이다. 청춘의 그들에게 인생에 아니다. 방황하였으며, 봄바람을 그들의 곧 아름다우냐? 이것이야말로 커다란 피고, 주는 수 이것이다. 앞이 있는 창공에 그림자는 튼튼하며, 피가 사막이다.
+                    <br>
+                    <br>
+                </span>
+                <div class="sub1-sub-title p0">
+                <h3>Lisence</h3>
+                   <p class="lisence">
+                       -GTQ 포토샵 1급<br>
+                       -컴퓨터그래픽스 운용기능사<br>
+                       -웹디자인기능사
+                    </p>
+                </div> 
+            </div>
+            <div class="sub-img">
+                <div class="sub-img-content tooltip">
+                    <div class="tooltip-content">CREATIVE</div>
+                     <img src="./images/mimoticon.png" class="mimo" alt="미모티콘">
+                     <ul class="sub-btn">
+                         <li><a href="#"># 낙천적인</a></li>
+                         <li><a href="#"># 디자이너</a></li>
+                         <li><a href="#"># 퍼블리셔</a></li>
+                     </ul>
+                </div>
+            </div>
+        </div>
+       <div class="sub1-sub-title">
+       <h3>Education</h3>
+            <p class="lisence">
+               -GTQ 포토샵 1급<br>
+               -컴퓨터그래픽스 운용기능사<br>
+               -웹디자인기능사
+            </p>
+        </div> 
+        <div class="sub1-bottom">
+            <div class="edu">
+               <div class="map">
+                   <i><br>2018.02</i>
+                   <i><br>2019.06</i>
+                   <i class="mg_r"><br>2021.01</i>
+                   <span></span>
+               </div>
+                <div class="tooltip-toggle" data-tooltip="(주)가우리커뮤니케이션 입사"></div>
+                <div class="tooltip-toggle" data-tooltip="더 휴먼 아트 아카데미 퍼블리싱 수료"></div>
+                <div class="tooltip-toggle" data-tooltip="00대학교 시각디자인과 졸업"></div>
+            </div>
+        </div>
+	</div>
+	<div class="sub sub2">
+	    <div class="sub-title">
+            <h2>skill</h2>
+            <p>DESIGN & CODING SKILL</p>
+            <hr>
+            <div id="container"></div>
+        </div>
+	</div>
+	<div class="sub"></div>
+	<div class="sub"></div>
+	<div class="sub"></div>
+	<ul class="controller">
+		<li><a href="#">button1</a></li>
+		<li><a href="#">button2</a></li>
+		<li><a href="#">button3</a></li>
+		<li><a href="#">button4</a></li>
+		<li><a href="#">button5</a></li>
+		<li><a href="#">button6</a></li>
+	</ul>
+</div>
+</body>
+</html>
