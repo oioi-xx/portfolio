@@ -1,0 +1,29 @@
+@media screen and (max-width: 1280px) { 
+    .sub1{padding: 0;}
+    .sub1 .sub-title{margin-top:50px;}
+}
+
+
+@media screen and (max-width: 1080px) { 
+    .sub1 .sub-img{display: none;}
+     hr{display: none}
+    .sub1 .sub-title{width: 100%;}
+}
+
+@media screen and (max-width: 940px) { 
+    .edu .map span{width: 440px}
+    .edu .map i{margin-right: 200px;}
+    .edu .map i.mg_r{margin-right:0}
+}
+
+@media screen and (max-width: 770px) { 
+    .tooltip-toggle{display: none}
+    .edu{display: none}
+    .sub1-sub-title p.lisence{font-size: 14px;line-height: 180%; display: flex}
+    .sub-btn li{display:block}
+    .sub1 .sub-title{margin-top:150px;}
+}
+
+@media screen and (min-width: 1079px) { 
+    .menu-bg{opacity: 0}
+}

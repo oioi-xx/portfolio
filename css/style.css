@@ -1,0 +1,106 @@
+/*====================================font======================================*/
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500&display=swap');
+
+@font-face {
+    font-family: 'Neuzeit Grotesk';
+    src: url('NeuzeitGro-Bla.eot');
+    src: url('NeuzeitGro-Bla.ttf');
+    src: local('Neuzeit Grotesk Black'), local('NeuzeitGro-Bla'),
+        url('NeuzeitGro-Bla.eot?#iefix') format('embedded-opentype'),
+        url('NeuzeitGro-Bla.woff2') format('woff2'),
+        url('NeuzeitGro-Bla.woff') format('woff'),
+        url('NeuzeitGro-Bla.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+/*====================================공통속성======================================*/
+
+body {margin: 0;padding: 0;overflow-y: hidden;font-family: 'Noto Sans KR';font-size: 1rem;color: rgb(59, 59, 59);}
+.main_area {width: 100%;height: 969px;}
+.main-bg {position: absolute;width: 100%;height: 100%;background: -webkit-linear-gradient(bottom left, #fc354c, #0abfbc);background: -o-linear-gradient(bottom left, #fc354c, #0abfbc);background: linear-gradient(to top right, #fc354c, #0abfbc);background-size: 400% 400%;animation: AnimationName 15s ease infinite;opacity: .5;}
+.main-bg-img {position: absolute;top: 0;opacity: .5;background-image: url(../images/mainbg.jpg);width: 100%;height: 100%;z-index: 5}
+.main_area .title {position: absolute;left: 50%;top: 50%;transform: translate(-50%, -50%);line-height: 120px;text-align: center;font-size: 135px;font-weight: 700;letter-spacing: -10px;font-family: 'Noto Serif SC', serif;z-index: 6;color: #fff}
+.main_area .title2 {position: absolute;left: 50%;top: 64%;transform: translate(-50%, -50%);line-height: 120px;text-align: center;font-size: 20px;font-weight: 700;z-index: 4;color: rgba(0, 0, 0, .2)}
+.main_area .title3 {position: absolute;left: 50%;top: 40%;transform: translate(-50%, -50%);text-align: center;font-size: 16px;font-weight: 500;letter-spacing: -1px;z-index: 6;color: rgba(255, 255, 255, .5);}
+
+/*==================================서브페이지=====================================*/
+
+.sub {padding: 50px;width: 100%;height: 964px;text-transform: uppercase;background: #f4f4f4;color: #222;-webkit-box-sizing: border-box;box-sizing: border-box;}
+
+/*================================페이지 네이션=====================================*/
+
+.controller {position: fixed;right: 30px;top: 50%;z-index: 10;margin: 0;margin-top: -92px;padding: 0;width: 14px;list-style: none;}
+.controller li {margin-top: 20px;width: 14px;height: 14px;}
+.controller li:first-child {margin-top: 0;}
+.controller li a {display: block;width: 14px;height: 14px;text-indent: -9999px;background: rgba(0, 0, 0, .3);-webkit-border-radius: 50%;border-radius: 50%;}
+.controller li a.on {background: rgba(0, 0, 0, .8);}
+
+/*================================메뉴=====================================*/
+
+nav {width: 100%;position: relative;z-index: 7}
+nav .menu-bar {position: absolute;left: 10%;top: 100px;}
+nav .menu-bar img {width: 50%}
+nav ul {position: absolute;left: 10%;margin-top: 200px;display: none}
+nav ul li {line-height: 320%;}
+nav ul li a {display: inline-block;font-size: 30px;font-family: 'Neuzeit Grotesk';font-weight: 600;color: rgba(255, 255, 255, .7);text-decoration: none;}
+nav ul li a span:after {content: "";display: block;height: 4px;background: #fff;width: 0%;transition: all ease-out .3s}
+nav ul li:hover a span:after {width: 100%}
+nav ul li:hover a {color: #fff;}
+
+.menu-bg {width: 100%;height: 100%;background: rgba(0, 0, 0, .7);position: absolute;top: 0;z-index: 6;display: none
+}
+
+/*======================================subpage1===================================*/
+
+.sub1-top {display: flex;}
+.sub1 .sub-title {margin-top: 150px; padding: 0 100px; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; width: 50%;
+}
+.sub1 .sub-title h2 {font-size: 60px;font-family: 'Neuzeit Grotesk';font-weight: 900;margin-bottom: 20px;}
+.sub1 .sub-title p {font-size: 20px;}
+.sub1-sub-title p.lisence{font-size: 14px;line-height: 180%;display: none;}
+.sub1-sub-title.p0 p.lisence{font-size: 14px;line-height: 180%;padding-top: 20px;display: block}
+.sub1 .sub-title .text {font-size: 14px;line-height: 180%}
+.sub1 .sub-title .text b { font-weight: bold;}
+.sub1 .sub-title hr {width: 700px}
+.sub1 .lisence { display: block}
+.sub1 .sub-img {display: block;text-align: center;width: 50%;margin-top: 150px;flex: none}
+.sub1 .sub-img .sub-btn {text-align: center;margin-top: 20px;}
+.sub1 .sub-img .sub-btn li {display: inline-block;width: 90px;padding: 0px 20px;border: 1px solid #ddd;border-radius: 50px;margin-right: 10px;height: 50px}
+.sub1 .sub-img .sub-btn li:last-child {margin-right: 0px;}
+.sub1 .sub-img .sub-btn li a {text-decoration: none;color: #0abfbc;line-height: 50px}
+.sub1 .sub-img .sub-btn li:hover {background: #0abfbc}
+.sub1 .sub-img .sub-btn li:hover a {color: #ffffff}
+.sub1-bottom {padding: 0 100px;position: relative;top: 100px;margin-left: 66px}
+.sub1-sub-title {padding: 0 100px;font-size: 30px;font-weight: 900;font-family: 'Neuzeit Grotesk';}
+.sub1-sub-title.p0{padding: 0;padding-bottom: 20px;}
+.edu .map {margin-left: 16px;}
+.edu .map i {content: "";width: 12px;height: 12px;display: inline-block;background: #222;border-radius: 50px;margin-right: 200px;color: #aaa}
+.edu .map span {content: "";width: 600px;height: 2px;display: block;background: #222;position: absolute;top: 5px}
+
+/*====================================툴팁=========================================*/
+
+.tooltip-toggle {cursor: pointer;position: relative;bottom: 30px;left: 20px;}
+.tooltip-toggle:nth-child(2) {margin-left: 215px;}
+.tooltip-toggle:nth-child(3) {margin-left: 430px;}
+.tooltip-toggle::before{position: absolute;top: -80px;left: -90px;background-color: #222;border-radius: 50px;color: #fff;content: attr(data-tooltip);padding: 1rem;width: 160px;}
+
+.tooltip-toggle::after{position: absolute;top: -20px;border-left: 10px solid transparent;border-right: 10px solid transparent;border-top: 10px solid #222;content: " ";font-size: 0;line-height: 0;margin-left: -5px;width: 0;}
+.tooltip-toggle::before,
+.tooltip-toggle::after{color: #efefef;font-family: monospace;font-size: 14px;opacity: 1;pointer-events: none;text-align: center;font-family: 'Noto Sans KR'
+}
+
+.tooltip {position: relative;display: inline-block;margin: auto;}
+.tooltip .tooltip-content {visibility: hidden;width: 120px;background-color: #0abfbc;padding: 20px 20px;color: white;text-align: center;position: absolute;z-index: 1;bottom: 90%;left:30%;margin-left: 0px; opacity: .8; border-radius: 30px; transition: all .3s; opacity: 0}
+.tooltip .tooltip-content::after {content: " ";position: absolute;top: 90%;left: 50%;margin-left: -10px;border-width: 10px;border-style: solid;border-color: #0abfbc transparent transparent transparent;}
+.tooltip:hover .tooltip-content { visibility: visible; bottom: 95%; opacity: 1}
+
+
+/*==========================================서브페이지3===========================*/
+
+.sub2 .sub-title {margin-top: 150px; padding: 0 100px; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; width: 50%;
+}
+.sub2 .sub-title h2{font-size: 60px;font-family: 'Neuzeit Grotesk';font-weight: 900;margin-bottom: 20px;}
+.sub2 .sub-title h2 p{font-family: 'Noto Sans KR';}
+#container{margin: 20px;width: 200px;height: 200px;position:relative;z-index: 999; background: #000;}
+

@@ -1,0 +1,78 @@
+
+/*메뉴 애니메이션*/
+.menu-trigger.active-1 span:nth-of-type(1) {
+  -webkit-transform: translateY (20px) rotate (-45deg);
+  transform: translateY(20px) rotate(-45deg);
+}
+
+.menu-trigger.active-1 span:nth-of-type(2) {
+  opacity: 0;
+}
+
+.menu-trigger.active-1 span:nth-of-type(3) {
+  -webkit-transform: translateY(-20px) rotate(45deg);
+  transform: translateY(-20px) rotate(45deg);
+}
+
+
+
+.menu-trigger {
+  margin-right: 70px;
+  margin-bottom: 50px;
+}
+.menu-trigger,
+.menu-trigger span {
+  display: inline-block;
+  transition: all .4s;
+  box-sizing: border-box;
+}
+
+.menu-trigger {
+  position: relative;
+  width: 50px;
+  height: 44px;
+}
+
+.menu-trigger span {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-color: #fff;
+  border-radius: 4px;
+}
+
+.menu-trigger span:nth-of-type(1) {
+  top: 0;
+}
+
+.menu-trigger span:nth-of-type(2) {
+  top: 20px;
+}
+
+.menu-trigger span:nth-of-type(3) {
+  bottom: 0;
+}
+
+/*백그라운드 그라데이션*/
+background: linear-gradient(137deg, #fff6b7, #f77c99, #6578f2, #c2ffd8); background-size: 800% 800%; -webkit-animation: AnimationName 16s ease infinite; -moz-animation: AnimationName 16s ease infinite; -o-animation: AnimationName 16s ease infinite; animation: AnimationName 16s ease infinite; @-webkit-keyframes AnimationName { 0%{background-position:0% 50%} 50%{background-position:100% 50%} 100%{background-position:0% 50%} } @-moz-keyframes AnimationName { 0%{background-position:0% 50%} 50%{background-position:100% 50%} 100%{background-position:0% 50%} } @-o-keyframes AnimationName { 0%{background-position:0% 50%} 50%{background-position:100% 50%} 100%{background-position:0% 50%} } @keyframes AnimationName { 0%{background-position:0% 50%} 50%{background-position:100% 50%} 100%{background-position:0% 50%} }
+
+
+
+
+/*타이핑 텍스트*/
+p.typing-txt{display: none;}
+  
+
+.typing {  
+/*       position: absolute;*/ 
+     display: inline-block; 
+      animation-name: cursor; 
+      animation-duration: 0.3s; 
+      animation-iteration-count: infinite; 
+    } 
+    @keyframes cursor{ 
+      0%{border-right: 1px solid #fff} 
+      50%{border-right: 1px solid #000} 
+      100%{border-right: 1px solid #fff} 
+    }
