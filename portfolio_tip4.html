@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>portfolio tip4 : 스크롤 배경 효과</title>
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic">
+<link rel="stylesheet" href="css/reset.css">
+<!-- https://html5up.net/landed -->
+<style>
+body {
+	margin: 0;
+	padding: 0;
+	overflow-y: hidden;
+	font-family: "Open Sans", sans-serif;
+	font-size: 1rem;
+	color: #555;
+}
+.main_area {
+	position: relative;
+	width: 100%;
+	height: auto;
+	background: url(images/pic01.jpg) no-repeat center center;
+	background-size: cover;
+}
+.main_area .title {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin: -60px 0 0 -150px;
+	width: 300px;
+	height: 120px;
+	line-height: 120px;
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 42px;
+	font-weight: 300;
+	background: rgba(255,255,255,.2);
+	color: #fff;
+}
+.sub {
+	padding: 50px;
+	width: 100%;
+	height: 700px;
+	text-transform: uppercase;
+	font-size: 100px;
+	font-weight: 300;
+	font-style: italic;
+	background: #f4f4f4;
+	color: #f4f4f4;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	-webkit-text-shadow: 1px 1px 2px rgba(0,0,0,.1);
+	text-shadow: 1px 1px 2px rgba(0,0,0,.1);
+}
+.sub:nth-child(even) {
+	background: #eaeaea;
+	color: #eaeaea;
+}
+.controller {
+	position: fixed;
+	right: 30px;
+	top: 50%;
+	z-index: 100;
+	margin: 0;
+	margin-top: -92px;
+	padding: 0;
+	width: 14px;
+	list-style: none;
+}
+.controller li {
+	margin-top: 20px;
+	width: 14px;
+	height: 14px;
+}
+.controller li:first-child {
+	margin-top: 0;
+}
+.controller li a {
+	display: block;
+	width: 14px;
+	height: 14px;
+	text-indent: -9999px;
+	background: #8ac007;
+	-webkit-border-radius: 50%;
+	border-radius: 50%;
+}
+.controller li a.on {
+	background: #fff;
+}
+</style>
+<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.js"></script>
+<script>
+$(function(){
+	var n=0;
+	var t=0;
+	var containerH=700;
+	var moving=false;
+
+	$(".controller li").eq(n).find("a").addClass("on");
+	$(".controller li a").click(function(e){
+		e.preventDefault();
+		n=$(this).parent().index();
+		if(n>0){
+			t=$(".sub").eq(n-1).offset().top;
+		}else{
+			t=0;
+		}
+
+		$("html, body").stop().animate({scrollTop:t}, 800, function(){
+			$(".controller li").find("a").removeClass("on");
+			$(".controller li").eq(n).find("a").addClass("on");
+		});
+	});
+	$(".container").mousewheel(function(e, delta){
+		if(!moving){
+			if(delta > 0){
+				// console.log("up");
+				if(n > 0){
+					n=n-1;
+				}
+			}else{
+				// console.log("down");
+				if(n < 5){
+					n=n+1;
+				}
+			}
+			// console.log("n : "+n);
+
+			if(n > 0){
+				t=$(".sub").eq(n-1).offset().top;
+			}else{
+				t=0;
+			}
+			// console.log("t : "+t);
+
+			moving=true;
+			$("html, body").stop().animate({scrollTop:t}, 800, function(){
+				moving=false;
+				$(".controller li").find("a").removeClass("on");
+				$(".controller li").eq(n).find("a").addClass("on");
+			});
+		}
+	});
+	$(window).resize(function(){
+		var h=$(this).height();
+		$(".main_area").css({height:h+"px"});
+	});
+
+	$(window).trigger("resize");
+});
+</script>
+<!-- https://html5up.net/uploads/demos/highlights/images/pic01.jpg -->
+</head>
+
+<body>
+<div class="container">
+	<div class="main_area"><div class="title">portfolio</div></div>
+	<div class="sub">section1</div>
+	<div class="sub">section2</div>
+	<div class="sub">section3</div>
+	<div class="sub">section4</div>
+	<div class="sub">section5</div>
+	<ul class="controller">
+		<li><a href="#">button1</a></li>
+		<li><a href="#">button2</a></li>
+		<li><a href="#">button3</a></li>
+		<li><a href="#">button4</a></li>
+		<li><a href="#">button5</a></li>
+		<li><a href="#">button6</a></li>
+	</ul>
+</div>
+</body>
+</html>
